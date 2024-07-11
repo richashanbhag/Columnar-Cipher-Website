@@ -14,8 +14,21 @@
     </header>
     <div class="container text-center">
         <div class="intro my-4">
-            <p>The Columnar Transposition Cipher is a classical encryption technique that rearranges the characters of a plaintext message into columns based on a given key, then reads the columns in a specified order to produce the ciphertext. This method involves writing the plaintext horizontally in rows, padding it if necessary, and then extracting characters vertically according to the sequence determined by the key's alphabetical order. The key dictates the order in which the columns are read and reconstructed into the encrypted message. This cipher provides a moderate level of security, relying on the secrecy of the key, and is often used to introduce basic concepts of cryptography. Its simplicity and ease of implementation make it a popular choice for educational purposes and historical study in the field of cryptography.</p>
+            <p>The Columnar Transposition Cipher is a classical encryption technique that rearranges the characters of a plaintext message into columns based on a given key, then reads the columns in a specified order to produce the ciphertext.  This cipher provides a moderate level of security, relying on the secrecy of the key, and is often used to introduce basic concepts of cryptography.  <br> <big>Encryption </big>- In a transposition cipher, the order of the alphabets is re-arranged to obtain the cipher-text.
+
+               <br>1) The message is written out in rows of a fixed length, and then read out again column by column, and the columns are chosen in some scrambled order.
+                <br> 2) Width of the rows and the permutation of the columns are usually defined by a keyword.
+                For example, the word HACK is of length 4 (so the rows are of length 4), and the permutation is defined by the alphabetical order of the letters in the keyword. In this case, the order would be "3 1 2 4".
+                <br>3) Any spare spaces are filled with nulls or left blank or placed by a character (Example: _).
+                Finally, the message is read off in columns, in the order specified by the keyword.</p>
+               <big>Decryption</big> - 
+
+To decipher it, the recipient has to work out the column lengths by dividing the message length by the key length.
+Then, write the message out in columns again, then re-order the columns by reforming the key word.
+
+
         </div>
+        <div class="img"><img src="columnar-transposition-cipher eg.png" alt="Example"></div>
         <div class="buttons my-4 d-flex justify-content-center">
             <button id="btns" class="btn btn-primary btn-lg mx-2" onclick="location.href='cipher.html'">Generate the Cipher</button>
             <button id="btns" class="btn btn-primary btn-lg mx-2" onclick="location.href='decipher.html'">Decipher the Code</button>
