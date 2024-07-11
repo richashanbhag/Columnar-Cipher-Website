@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <title>About Columnar Cipher</title>
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>Columnar Cipher </h1>
+    </header>
+    <div class="container text-center">
+        <div class="intro my-4">
+            <p>The Columnar Transposition Cipher is a classical encryption technique that rearranges the characters of a plaintext message into columns based on a given key, then reads the columns in a specified order to produce the ciphertext. This method involves writing the plaintext horizontally in rows, padding it if necessary, and then extracting characters vertically according to the sequence determined by the key's alphabetical order. The key dictates the order in which the columns are read and reconstructed into the encrypted message. This cipher provides a moderate level of security, relying on the secrecy of the key, and is often used to introduce basic concepts of cryptography. Its simplicity and ease of implementation make it a popular choice for educational purposes and historical study in the field of cryptography.</p>
+        </div>
+        <div class="buttons my-4 d-flex justify-content-center">
+            <button id="btns" class="btn btn-primary btn-lg mx-2" onclick="location.href='cipher.html'">Generate the Cipher</button>
+            <button id="btns" class="btn btn-primary btn-lg mx-2" onclick="location.href='decipher.html'">Decipher the Code</button>
+        </div>
+        <div class="buttons my-4" id="abtBtn">
+            <button class="btn btn-secondary btn-lg mx-2" onclick="location.href='index.html'">Back to Home page</button>
+        </div>
+    </div>
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Columnar Cipher Website</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

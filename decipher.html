@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decipher Columnar Cipher</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="decipher.css">
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>Decipher Columnar Cipher</h1>
+    </header>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <textarea id="cipherText" class="form-control" rows="10" placeholder="Enter encrypted message here..."></textarea>
+                <input type="text" id="key" class="form-control my-3" placeholder="Enter key...">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="keepSpaces">
+                    <label class="form-check-label" for="keepSpaces">Keep spaces</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="keepPunctuation">
+                    <label class="form-check-label" for="keepPunctuation">Keep punctuation</label>
+                </div>
+                <button class="btn btn-primary btn-lg mx-2 my-3" onclick="decipherMessage()">Decipher</button>
+            </div>
+            <div class="col-md-6 text-center">
+                <textarea id="decipheredText" class="form-control" rows="10" readonly placeholder="Decrypted message will appear here..."></textarea>
+                <button class="btn btn-secondary btn-lg mx-2 my-3" onclick="location.href='index.html'">Back to Home</button>
+                <button class="btn btn-secondary btn-lg mx-2 my-3" onclick="location.href='cipher.html'">Encrypt a Code</button>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Columnar Cipher Website</p>
+    </footer>
+    <script src="decipher.js"></script>
+</body>
+</html>
