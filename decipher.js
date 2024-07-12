@@ -1,12 +1,9 @@
-function decryptMessage(cipher, key, keepSpaces, keepPunctuation) {
+function decryptMessage(cipher, key, keepSpaces) {
     let msg = "";
 
     // Remove spaces and punctuation if not needed
     if (!keepSpaces) {
-        cipher = cipher.replace(/\s+/g, '');
-    }
-    if (!keepPunctuation) {
-        cipher = cipher.replace(/[^\w]/g, '');
+        cipher = cipher.replace(/\s+/g, '').replace(/[^\w]/g, '');
     }
 
     // track key indices
@@ -67,13 +64,12 @@ function decipherMessage() {
     const cipherText = document.getElementById('cipherText').value;
     const key = document.getElementById('key').value;
     const keepSpaces = document.getElementById('keepSpaces').checked;
-    const keepPunctuation = document.getElementById('keepPunctuation').checked;
 
     if (key.length === 0) {
         alert("Please enter a key.");
         return;
     }
 
-    const decipheredText = decryptMessage(cipherText, key, keepSpaces, keepPunctuation);
+    const decipheredText = decryptMessage(cipherText, key, keepSpaces);
     document.getElementById('decipheredText').value = decipheredText;
 }
