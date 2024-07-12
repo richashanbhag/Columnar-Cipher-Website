@@ -2,15 +2,11 @@ function handleEncrypt() {
     const msg = document.getElementById('plainText').value;
     const key = document.getElementById('key').value;
     const keepSpaces = document.getElementById('keepSpaces').checked;
-    const keepPunctuation = document.getElementById('keepPunctuation').checked;
 
-    // If necessary, modify msg based on keepSpaces and keepPunctuation
+    // If necessary, modify msg based on keepSpaces
     let processedMsg = msg;
     if (!keepSpaces) {
-        processedMsg = processedMsg.replace(/\s+/g, '');
-    }
-    if (!keepPunctuation) {
-        processedMsg = processedMsg.replace(/[^\w\s]|_/g, '');
+        processedMsg = processedMsg.replace(/\s+/g, '').replace(/[^\w]/g, '');
     }
 
     const cipheredText = encryptMessage(processedMsg, key);
